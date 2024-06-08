@@ -1,3 +1,4 @@
+// ------ Butoane rating ------
 const butonUnu = document.querySelector(".rating-card-button-unu");
 
 const butonDoi = document.querySelector(".rating-card-button-doi");
@@ -8,7 +9,8 @@ const cardUnu = document.querySelector(".card-unu");
 
 const cardDoi = document.querySelector(".card-doi");
 
-
+const submitButton = document.querySelector(".rating-card-button-submit");
+const selectedRate = document.querySelector(".selected-rate");
 
 //buton 1
 const butonulUnuFunction = () => {
@@ -43,8 +45,23 @@ const butonulTreiFunction = () => {
 
 butonTrei.addEventListener("click",butonulTreiFunction);
 
+// buton submit
 
+const goToNextStep = () => {
+    const selectedButton = document.querySelector(".active-button");
 
+    if (selectedButton === null) {
+        alert("Please select a rate");
+    } else {
+        cardUnu.style.display = 'none';
+        cardDoi.style.display = 'block';
+
+        selectedRate.innerText = selectedButton.innerText;
+    }
+
+}
+
+submitButton.addEventListener("click", goToNextStep);
 
 /*pasi sa se intample ceva cand apasam pe buton
 1 selectam butonul (document.querySelector)
@@ -62,8 +79,12 @@ ex: numeConstanta.style.height = "500px";
 
 /* tema
 
-de facut html
-de facut css
-cand dau click pe butonul de submit sa dispara cardul 1 si sa apara cardul 2
+colturi rotunjite la card         Facut
+culoarea din jurul stelutei       Facut
+culori text ( titlu & subtitlu )  Facut
+culori butoane + efect hover butoane ( la hover butoanele cu 1,2,3 ele trebuie sa aiba culoarea de background --white )
+cele 3 butoane trebuie sa fie centrate  Facut
+butonul de submit trebuie sa ocupe toata latimea din card, sa fie rotunjit, un spatiu mai mare intre litere, litere mai groase
+efect hover buton submit           Facut partial nu stiu efect hover buton submit !!!!!!!!!!!!
 
 */

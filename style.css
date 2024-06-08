@@ -1,23 +1,44 @@
 * {
-    margin: 4px;
-    padding: 0;
-    border: none;
-    background-color: #31323a;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+body {
+  background-color: var(--veryDarkBlue);
+}
+
+/* to do: de convertit hsl la hex */
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --lightGray: hsl(217, 12%, 63%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.rating-card-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rating-card-container{
-background-color: black;
-padding-top: 24px;
-padding-bottom: 24px;
-padding-left: 24px;
-padding-right: 24px;
+  width: 340px;
+  background-color: var(--darkBlue);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 10px;
 }
 
 .button-star{
   margin-top: 24px;
   font-size: 12px;
   font-weight: 500;
-  background-color: #111b47;
+  background-color: var(--veryDarkBlue);
   padding: 16px;
 
 
@@ -27,17 +48,19 @@ padding-right: 24px;
 
 .rating-card-title{
   margin-top: 24px;
+  color: var(--white);
 }
 
 .paragraph-container{
     overflow: auto;
     margin-top: 24px;
+    color: var(--white);
 }
 
 .rating-card-button-submit{
   font-size: 12px;
   font-weight: 500;
-  background-color: orange;
+  background-color: var(--orange);
   color: black;
 
   padding-top: 8px;
@@ -48,26 +71,47 @@ padding-right: 24px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 24px;
+
+  width: 100%;
+  letter-spacing: 25px;
+  font-weight: bold;
+
+  /*efect hover buton submit*/
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .rating-card-buttons-container button {
   font-size: 12px;
   font-weight: 500;
-  background-color: #111b47;
+  background-color: var(--veryDarkBlue);
   padding: 16px;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 24px;
   border-radius: 50%;
   cursor: pointer;
-
+  height: 48px;
+  width: 48px;
 }
-    
+
 .rating-card-buttons-container button.active-button {
 background-color: orange;
 }
 
+.rating-card-buttons-container{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
 .card-doi{
     display: none;
+}
+
+.selected-rate-text {
+  color: var(--white);
 }
 
 @media (min-width: 500px) {
