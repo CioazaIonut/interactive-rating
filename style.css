@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   border: none;
+  font-family: "Overpass", sans-serif;
 }
 
 body {
@@ -35,7 +36,6 @@ body {
 }
 
 .button-star{
-  margin-top: 24px;
   font-size: 12px;
   font-weight: 500;
   background-color: var(--veryDarkBlue);
@@ -49,12 +49,14 @@ body {
 .rating-card-title{
   margin-top: 24px;
   color: var(--white);
+  font-size: 28px;
 }
 
 .paragraph-container{
     overflow: auto;
-    margin-top: 24px;
+    margin-top: 16px;
     color: var(--white);
+    line-height: 24px;
 }
 
 .rating-card-button-submit{
@@ -63,29 +65,32 @@ body {
   background-color: var(--orange);
   color: black;
 
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 24px;
   padding-right: 24px;
 
-  border-radius: 4px;
+  border-radius: 16px;
   cursor: pointer;
   margin-top: 24px;
 
   width: 100%;
-  letter-spacing: 25px;
+  letter-spacing: 2px;
   font-weight: bold;
 
-  /*efect hover buton submit*/
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition-property: background-color,color;
+  transition-duration: 0.25s;
+}
+
+.rating-card-button-submit:hover{
+  background-color: var(--white);
+  color: var(--veryDarkBlue);
 }
 
 .rating-card-buttons-container button {
   font-size: 12px;
   font-weight: 500;
-  background-color: var(--veryDarkBlue);
+  background-color: var(--lightGray);
   padding: 16px;
   color: var(--white);
   margin-top: 24px;
@@ -93,6 +98,13 @@ body {
   cursor: pointer;
   height: 48px;
   width: 48px;
+  transition-property: background-color,color;
+  transition-duration: 0.25s;
+}
+
+.rating-card-buttons-container button:hover{
+background-color: var(--white);
+color: var(--veryDarkBlue);
 }
 
 .rating-card-buttons-container button.active-button {
@@ -104,14 +116,63 @@ background-color: orange;
   text-align: center;
   align-items: center;
   display: flex;
-}
-
-.card-doi{
-    display: none;
+  gap: 16px;
 }
 
 .selected-rate-text {
   color: var(--white);
+}
+
+/*pasul 2*/
+
+.card-doi{
+  display: none;
+  position: relative;
+}
+
+.nu-imi-vine-nume{
+  color: orange;
+}
+
+.reset-button{
+  font-size: 16px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: var(--white);
+  background-color: transparent;
+
+  cursor: pointer;
+  border-radius: 16px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.reset-button-icon{
+  margin-right: 4px;
+}
+
+.secound-card-title{
+  color: var(--white);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  margin-top: 24px;
+}
+
+.secound-paragraph-container{
+  overflow: auto;
+  margin-top: 16px;
+  color: var(--white);
+  line-height: 24px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
 @media (min-width: 500px) {

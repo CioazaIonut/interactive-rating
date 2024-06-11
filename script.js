@@ -12,6 +12,8 @@ const cardDoi = document.querySelector(".card-doi");
 const submitButton = document.querySelector(".rating-card-button-submit");
 const selectedRate = document.querySelector(".selected-rate");
 
+const buttonReset = document.querySelector(".reset-button");
+
 //buton 1
 const butonulUnuFunction = () => {
     //butonUnu.style.backgroundColor = "orange"
@@ -63,6 +65,19 @@ const goToNextStep = () => {
 
 submitButton.addEventListener("click", goToNextStep);
 
+// buton reset
+
+const resetButtonPasDoi = () => {
+    cardUnu.style.display = 'block';
+    cardDoi.style.display = 'none';
+    butonUnu.classList.remove("active-button")
+    butonDoi.classList.remove("active-button")
+    butonTrei.classList.remove("active-button")
+
+}
+
+buttonReset.addEventListener("click",resetButtonPasDoi);
+
 /*pasi sa se intample ceva cand apasam pe buton
 1 selectam butonul (document.querySelector)
 2 adaugam eventListener (calculateButton.addEventListener("click",showResoult))
@@ -79,12 +94,7 @@ ex: numeConstanta.style.height = "500px";
 
 /* tema
 
-colturi rotunjite la card         Facut
-culoarea din jurul stelutei       Facut
-culori text ( titlu & subtitlu )  Facut
-culori butoane + efect hover butoane ( la hover butoanele cu 1,2,3 ele trebuie sa aiba culoarea de background --white )
-cele 3 butoane trebuie sa fie centrate  Facut
-butonul de submit trebuie sa ocupe toata latimea din card, sa fie rotunjit, un spatiu mai mare intre litere, litere mai groase
-efect hover buton submit           Facut partial nu stiu efect hover buton submit !!!!!!!!!!!!
+de terminat pasul 2
+de convertit culorile
 
 */
